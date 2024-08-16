@@ -19,7 +19,6 @@ def display_task():
     else:
         print("To-Do List is empty.")
 
-
 def delete_task(index, task):
     try:
         del tasks[index -1]
