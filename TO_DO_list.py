@@ -22,7 +22,7 @@ def display_task():
 def delete_task(index, task):
     try:
         del tasks[index -1]
-        #tasks.save_task()
+        print("Task",index,"delete")
     except IndexError:
         print("invalid task number.")
         
@@ -32,9 +32,9 @@ def main():
         print("\nOptions:")
         print("1. Add task")
         print("2. Update task")
-        print("3. Display tasks")
-        print("4. Delete tasks")
-        print("5. Quit")
+        print("3. Display task")
+        print("4. Delete task")
+        Print("5. Quit")
 
         choice = input("Enter your choice: ")
 
