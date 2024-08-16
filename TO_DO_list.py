@@ -20,13 +20,22 @@ def display_task():
         print("To-Do List is empty.")
 
 
+def delete_task(index, task):
+    try:
+        del tasks[index -1]
+        #tasks.save_task()
+    except IndexError:
+        print("invalid task number.")
+        
+
 def main():
     while True:
         print("\nOptions:")
         print("1. Add task")
         print("2. Update task")
         print("3. Display tasks")
-        print("4. Quit")
+        print("4. Delete tasks")
+        print("5. Quit")
 
         choice = input("Enter your choice: ")
 
@@ -40,6 +49,10 @@ def main():
         elif choice == "3":
             display_task()
         elif choice == "4":
+            index = int(input("Enter the task number to delete: "))
+            del_task = input("Enter the del task: ")
+            delete_task(index, del_task)
+        elif choice == "5":
             print("Exiting.")
             break
         else:
@@ -48,6 +61,12 @@ def main():
 
 if __name__== "__main__":
     main()
+
+
+
+
+
+
 
 
 
